@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: Arial, Calibri, Helvetica, and Times New Roman;
+        margin : 20px 30px;
+        background-color : #2b3245;
+      }
+      .container{
+        width: 100%;
+        border : 2px solid black;
+        border-radius : 5px;
+        padding : 5px 20px 15px 20px;
+        background-color : #0e1525;
+        color : white;
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="date"],
+      select,
+      textarea{
+        width : 100%;
+        padding : 12px;
+        margin-top : 10px;
+        border : 1px solid black;
+        border-radius : 4px;
+        background-color : #2b3245;
+      }
+      select{color: a6a6a6;}
+      ::placeholder{
+        color : #a6a6a6;
+      }
+      fieldset{
+        background-color: #2b3245;
+        border-color : black;
+      }
+      .main-heading{
+        text-align: center;
+      }
+      input[type="submit"]{
+        background-color : #009118;
+        color : white;
+        width : 100%;
+        cursor : pointer;
+        padding : 12px 20px;
+        border : 1px solid black;
+        border-radius : 20px;
+      }
+      input[type="submit"]:hover{
+        background-color : green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-heading">Payment Form</h1>
+      <hr />
+      <h2>User Information</h2>
+      <p>
+        Name: *
+        <input type="text" required placeholder="Jhone Smith" />
+      </p>
+      <fieldset>
+        <legend>Gender</legend>
+        Male<input type="radio" name="male" value="M" required /> Female
+        <input type="radio" name="female" value="F" />
+      </fieldset>
+      <p>
+        Address:
+        <textarea
+          placeholder="Enter your Address"
+          name="address"
+          cols="20"
+          rows="10"
+        ></textarea>
+      </p>
+      <p>
+        Email:
+        <input type="email" placeholder="example@mail.com" name="email" />
+      </p>
+      <p>
+        Pincode:
+        <input type="number" placeholder="123456" name="pincode" />
+      </p>
+      <h2>Payment Information</h2>
+      <p>
+        Card Type:
+        <select>
+          <option id="opt" value="">--Select Card Type--</option>
+          <option value="visa">Visa</option>
+          <option value="Rupay">Rupay</option>
+          <option value="Master Card">Master Card</option>
+        </select>
+      </p>
+      <p>
+        Card Number: *
+        <input
+          type="number"
+          placeholder="1111-2222-3333-4444"
+          name="card number"
+          required
+        />
+      </p>
+      <p>
+        Expire Date:
+        <input type="date" />
+      </p>
+      <p>
+        CVV:
+        <input type="number" placeholder="123" />
+      </p>
+      <input type="submit" value="Pay Now" />
+    </div>
+  </body>
+</html>
